@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    <package name="default" namespace="/" extends="struts-default">
+    	<action name="Showauthor" class = "packagea.ShowAll" method = "Showauthor">
+			<result name = "success" >/WEB-INF/content/Showauthor.jsp </result>
+		</action>
+		<action name="Showbook" class = "packagea.ShowAll">
+			<result name = "success" >/WEB-INF/content/Showbook.jsp </result>
+		</action>
+    	<action name="Update" class = "packagea.Update">
+			<result name = "success" >/WEB-INF/content/Update.jsp </result>
+		</action>
+    	<action name="JtUpdate" class = "packagea.Update" method = "Jump">
+			<result name = "success" >/WEB-INF/content/Update.jsp </result>
+		</action>
+    	<action name="CheckAuthor" class = "packagea.Addbook" method = "CheckAuthor">
+			<result name = "success" >/WEB-INF/content/Addbook.jsp </result>
+		</action>
+		<action name="Addauthor" class = "packagea.Addbook" method = "Addauthor">
+			<result name = "success" >/WEB-INF/content/Addauthor.jsp </result>
+		</action>
+    	<action name="Addauthorjump" class = "packagea.Addbook" method = "Jump">
+			<result name = "success" >/WEB-INF/content/Addauthor.jsp </result>
+		</action>
+		<action name="JtAddbook" class = "packagea.Addbook" method = "Jump">
+			<result name = "success" >/WEB-INF/content/Addbook.jsp </result>
+		</action>
+		<action name="Addbook" class = "packagea.Addbook">
+			<result name = "success" >/WEB-INF/content/Addbook.jsp </result>
+		</action>
+    	<action name="Delete" class = "packagea.Delete">
+			<result name = "success" >/WEB-INF/content/NewFile.jsp </result>
+		</action>
+		<action name="Rtaddbook" class = "packagea.Return">
+			<result name = "success" >/WEB-INF/content/Addbook.jsp </result>
+		</action>
+    	<action name="Return" class = "packagea.Return">
+			<result name = "success" >/WEB-INF/content/NewFile.jsp </result>
+		</action>
+    	<action name="ShowInf" class = "packagea.ShowInf">
+			<result name = "success" >/WEB-INF/content/ShowInformation.jsp </result>
+		</action>
+	    <action name="Searcha" class = "packagea.Searcha">
+			<result name = "success" >/WEB-INF/content/NewFile.jsp </result>
+		</action>
+		<action name="*">
+			<result>/WEB-INF/content/NewFile.jsp</result>
+		</action>
+    </package>
+
+
+
+</struts>
